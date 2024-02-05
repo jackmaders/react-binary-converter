@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  PUBLIC_URL: /${{github.event.repository.name}}/
+  REACT_APP_PUBLIC_URL: /${{github.event.repository.name}}/
 
 jobs:
   build:
