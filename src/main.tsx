@@ -10,5 +10,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <BinaryConverter />
       </Container>
     </React.StrictMode>
-  </ChakraProvider>
+  </ChakraProvider>,
 );
