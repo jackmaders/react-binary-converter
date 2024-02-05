@@ -58,6 +58,7 @@ export default function BinaryConverter() {
             <FormLabel>Binary</FormLabel>
             <Input
               value={inputBinary}
+              type="text"
               placeholder="Please provide binary..."
               onChange={(event) => {
                 setInputBinary(event.target.value);
