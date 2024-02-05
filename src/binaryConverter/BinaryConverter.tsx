@@ -22,29 +22,33 @@ export default function BinaryConverter() {
   const [formError, setFormError] = useState("");
 
   useEffect(() => {
-    if (!inputBinary) {
+    handledBinaryInput(inputBinary);
+  }, [inputBinary]);
+
+  function handledBinaryInput(binary: string) {
+    if (!binary) {
       setFormError("");
       setOutputDecimal(undefined);
       return;
     }
 
-    if (inputBinary.length > 8) {
+    if (binary.length > 8) {
       setFormError(ERROR_BINARY_MAX_LENGTH);
       setOutputDecimal(undefined);
       return;
     }
 
-    if (!BINARY_REGEX.test(inputBinary)) {
+    if (!BINARY_REGEX.test(binary)) {
       setFormError(ERROR_INVALID_BINARY);
       setOutputDecimal(undefined);
       return;
     }
 
-    const decimal = convertBinaryToDecimal(inputBinary);
+    const decimal = convertBinaryToDecimal(binary);
 
     setFormError("");
     setOutputDecimal(decimal);
-  }, [inputBinary]);
+  }
 
   return (
     <>
