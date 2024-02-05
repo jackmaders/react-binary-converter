@@ -42,6 +42,7 @@ export default function BinaryConverter() {
 
     const decimal = convertBinaryToDecimal(inputBinary);
 
+    setFormError("");
     setOutputDecimal(decimal);
   }, [inputBinary]);
 
