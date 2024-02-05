@@ -9,7 +9,8 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint --fix --ignore-path .gitignore  **/*.{ts,tsx,js,jsx}",
     "lint:prettier": "prettier --ignore-path .gitignore  --write .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
@@ -32,6 +33,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "prettier": "^3.2.4",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vitest": "^1.2.2"
   }
 }
